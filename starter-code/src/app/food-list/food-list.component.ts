@@ -10,7 +10,8 @@ export class FoodListComponent implements OnInit {
   foods: Object[];
   boolean: boolean;
   newFood: Object=[];
-  newList: Object[];
+  newList: Array<Object>[];
+  calorieCount: number = 0;
 
   buttonClickMethod(){
     if(this.boolean == true) {
@@ -33,10 +34,12 @@ export class FoodListComponent implements OnInit {
     this.newFood = {};
   }
 
-  addList(){
+  addList(foods){
     console.log("Food")
-    this.foods.push(this.newList)
-    this.newList = [];
+    this.newList.push(foods)
+    // this.calorieCount += foods.calories;
+    // console.log(this.calorieCount);
+    // this.newList = [];
   }
 
 }

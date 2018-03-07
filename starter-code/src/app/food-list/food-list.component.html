@@ -21,7 +21,7 @@
     <b>{{ food.name }}</b>
       <br>Calories: {{ food.calories}}
       <br><img style="width: 200px; height: 100px" [src]="food.image" alt="image" />
-      <br><button (click)="addList()">Add Food to List</button>
+      <br><button (click)="addList(foods)">Add Food to List</button>
   </li>
 </ul>
 
